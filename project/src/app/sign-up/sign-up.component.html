@@ -1,0 +1,17 @@
+<div class="form-box">
+    <form class="form">
+        <span class="title">Self-Study</span>
+        <span class="subtitle">Create a free account with your email.</span>
+        <div class="form-container">
+            <input type="text" class="input" placeholder="First Name" name="first_name" [(ngModel)]="first_name">
+            <input type="text" class="input" placeholder="last Name" name="last_name" [(ngModel)]="last_name">
+            <input type="email" class="input" placeholder="Email" name="email" [(ngModel)]="email">
+            <input type="password" class="input" placeholder="Password" name="password" [(ngModel)]="password">
+        </div>
+        <button (click)="createUser()">Sign up</button>
+    </form>
+    <div class="form-section">
+        <p>Have an account? <a href="" [routerLink]="['/sign-in']">Log in</a> </p>
+        <p><a [routerLink]="['/sign-in']"> Back </a></p>
+    </div>
+</div>

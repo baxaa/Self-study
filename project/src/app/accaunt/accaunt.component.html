@@ -1,0 +1,106 @@
+<!-- <body>
+    <div class="prof" *ngIf = "user">
+        <div class="profile">
+            <div class="profile-header">
+                <h2 class="profile-title">Your Profile</h2>
+            </div>
+            <div class="profile-body">
+                <form class="profile-form">
+                    <div class="form-group">
+                        <label for="first-name">First Name:</label>
+                        <input type="text" id="first-name" name="first-name" placeholder="{{user.user_name}}">
+                    </div>
+                    <div class="form-group">
+                        <label for="last-name">Last Name:</label>
+                        <input type="text" id="last-name" name="last-name" placeholder="{{user.user_name}}">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="{{user.email}}">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="profile1">
+            <div><a><img src="https://i.ibb.co/CBjJZ5B/logo.png" width="100"></a>
+                <h3>Self-study</h3>
+            </div>
+            <div>
+                <li class="lan"><a><img
+                            src="https://cdn-icons-png.flaticon.com/512/5194/5194962.png" width="50" class="logo1">
+                        To-Do</a></li>
+                <li class="lan"><a><img
+                            src="https://cdn-icons-png.flaticon.com/512/1441/1441035.png" width="50" class="logo1">
+                        Tasks</a></li>
+                <li class="lan"><a><img
+                            src="https://cdn-icons-png.flaticon.com/512/2343/2343668.png" width="50" class="logo1">
+                        Calendar</a></li>
+            </div>
+        </div>
+    </div>
+</body> -->
+
+<body>
+    <div class="container" *ngIf = "user" >
+        <div class="main">
+            <div class="topbar" style="position: relative; width: 1400px;left: 50px;">
+                <a [routerLink] = "['/']">LogOut</a>
+                <a [routerLink] = "['/profile']">Home</a>
+            </div>
+            <div class="row" >
+                <div class="col-md-4 mt-1" style="position: relative; width: 340px; height: 600px; text-align: center; top: 5px; left: 50px;">
+                    <div class="card text-center sidebar">
+                        <div class="card-body">
+                            <img src="https://t4.ftcdn.net/jpg/05/09/07/53/360_F_509075345_XcDTfdF4GHSA9O3Wb6KgnjKTg8ZPVrpO.jpg" class="rounded-circle" width="150" style="border-radius: 40%; position: relative; top: 20px;">
+                            <div class="mt-3">
+                                <h2>{{user.user_name}}</h2>
+                                <a [routerLink] = "['/profile']">Home</a>
+                                <a [routerLink] = "['/to-do']">To-Do List</a>
+                                <a [routerLink] = "['/tasks']">My Task</a>
+                                <a [routerLink] = "['/calendar']">Calendar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8 mt-1" style="position: relative; bottom: 595px; width: 1050px; left: 400px; height: max-content;">
+                    <div class="card mb-3 content">
+                        <h1 class="m-3 pt-3" style="display: inline; position: relative; left: 50px; width: fit-content;">About</h1>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-3" style="position: relative; width: fit-content; left: 20px;">
+                                    <h5>Username</h5>
+                                </div>
+                                <div class="col-md-9 text-secondary" style="position: relative; left: 20px; width: min-content;">
+                                    {{user.user_name}}
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="cold-md-3" style="position: relative; width: fit-content; left: 20px;">
+                                    <h5>Email</h5>
+                                </div>
+                                <div class="col-md-9 text-secondary" style="position: relative; left: 20px; width: min-content;">
+                                    {{user.email}}
+                                </div>
+                            </div>
+                            <hr>
+                        </div>
+                    </div>
+                    <div class="card mb-3 content" style="position: relative; top: 40px; height: 296px;">
+                        <h1 class="m-3" style="display: inline; position: relative; left: 50px; width: fit-content;">Task Info</h1>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-3" style="position: relative; left: 20px; width: fit-content;">
+                                    <h5> </h5>
+                                </div>
+                                <div class="col-md-9 text-secondary" style="position: relative; left: 20px; width: fit-content;">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

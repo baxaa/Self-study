@@ -1,0 +1,14 @@
+<header>
+    <div style="max-width: max-content; height: 70px; ">
+        <a class="backToHome" [routerLink]="['/profile']">
+            <button class="button-back">
+                Home
+            </button>
+        </a>
+    </div>
+
+</header>
+<div class="main">
+    <h1 class="calendar">Calendar</h1>
+    <full-calendar [options]="calendarOptions"></full-calendar>
+</div>

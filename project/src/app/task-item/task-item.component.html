@@ -1,0 +1,14 @@
+<!--      <span class="done_task">{{task.id}}) {{task.title}}</span>-->
+<!--      <span [ngClass]="task.isDone ? 'done_task' : ''">{{task.id}}) {{task.title}}</span>-->
+<!--<input type="checkbox"-->
+<!--       [(ngModel)]="task.isDone">-->
+<!--<span [class.done_task]="task.isDone">{{task.title}}</span>-->
+
+
+<div>
+    <input type="checkbox" [(ngModel)]="task.isDone">
+    <span [class.done_task]="task.isDone">{{task.title}}</span>
+    <span class="trash" (click)="removeTask()">🗑</span>
+    <button class="trash" (click)="removeTask()"></button>
+  </div>
+  

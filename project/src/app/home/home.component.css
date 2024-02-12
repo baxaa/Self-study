@@ -1,0 +1,346 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 8px 0;
+    text-align: center;
+    position: absolute;
+    top: 150px;
+    left: 280px;
+    font-family: Arial;
+    font-size: 55px;
+
+}
+
+button {
+    width: 230px;
+    height: 65px;
+    border: 3px solid #1a67a3;
+    border-radius: 45px;
+    transition: all 0.3s;
+    cursor: pointer;
+    background: #1a67a3;
+    font-size: 1.2em;
+    font-weight: 550;
+    font-family: "Mulish", sans-serif;
+    font-weight: 600;
+    position: relative;
+    top: 300px;
+    color: white;
+
+}
+
+
+button:hover {
+    background: #ffffff;
+    color: #1a67a3;
+    font-size: 1.5em;
+    width: 240px;
+    height: 67px;
+}
+
+#logo {
+    position: relative;
+    left: 90px;
+}
+
+p {
+    margin: 0;
+    font-family: "Garamound", sans-serif;
+    font-size: large;
+
+
+}
+
+.spacer {
+    flex: 1;
+}
+
+.toolbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(to right, #2a3665, #1a67a3, #02eeee);
+    color: white;
+    font-weight: 600;
+    opacity: 20;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.nav-bar {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    position: inherit;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.nav-option {
+    float: right;
+
+}
+
+.nav-option a {
+    position: relative;
+    display: block;
+    color: white;
+    padding: 20px 20px;
+    text-decoration: none;
+    text-align: left;
+    font-size: 23px;
+    right: 150px
+}
+
+.nav-option a:hover {
+    text-decoration: underline;
+}
+
+.nav-option a:hover::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+}
+
+.nav-option a:after {
+    text-decoration: solid underline 4px;
+    /* background: linear-gradient(to right, #2a3665, #1a67a3, #02eeee); */
+
+}
+
+.SS {
+    font-family: 'Libre Baskerville', serif;
+    font-weight: bold;
+    font-size: 35px;
+    position: relative;
+    left: 100px;
+}
+
+.main {
+    position: absolute;
+    top: 70px;
+    background-image: url("https://catherineasquithgallery.com/uploads/posts/2021-03/1614631783_13-p-fon-pola-dlya-fotoshopa-15.jpg");
+    background-position: center;
+    /* background-repeat: no-repeat; */
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    right: 0;
+    color: #1f2a52;
+    text-align: center;
+}
+
+.nav-option-after {
+    display: flex;
+    position: relative;
+    font-size: 23px;
+    right: 50px;
+    border-radius: 3px;
+    height: min-content;
+    border-width: 0px;
+    background-color: #22456041;
+}
+
+.nav-option-after:hover {
+    background-color: transparent;
+}
+
+.nav-option-after-a {
+    position: relative;
+    display: flex;
+    text-decoration: none;
+    color: white;
+}
+
+.paragraph1 {
+    position: relative;
+    top: 70px;
+    color: #2a3665;
+    font-size: 23px;
+    right: 250px;
+    font-family: 'Segoe UI';
+
+    /* background:linear-gradient(to right, #2a3665, #1a67a3, #02eeee); */
+}
+
+.buttons {
+    display: flex;
+    position: relative;
+    opacity: 10;
+    justify-content: space-between;
+    flex-direction: row;
+    top: 510px;
+    margin: 0 50px 0 50px;
+}
+
+.buttons a {
+    color: rgb(80, 80, 80);
+    font-family: "Manrope", sans-serif;
+    font-weight: 550;
+    font-size: 20px;
+    text-decoration: none;
+    padding: 0 0 0 50px;
+    position: relative;
+    top: -25px;
+    right: 40px;
+
+}
+
+.lan {
+    width: 380px;
+    height: 50px;
+    color: white;
+    border: 3px solid white;
+    border-radius: 7px;
+    background-color: white;
+    margin: 0px 0;
+    padding-top: 15px;
+    box-sizing: border-box;
+    box-sizing: inherit;
+    margin: 50px 50px 50px 50px;
+}
+
+.lan:hover {
+    border: 2px solid #1a67a3;
+}
+
+.logo1 {
+    position: relative;
+    top: 18px;
+    right: 8px;
+}
+
+.paragraph2 {
+    position: absolute;
+    top: 850px;
+    margin: 0 30px 0 70px;
+}
+
+#photo {
+    position: absolute;
+    /* top: 200px; */
+    left: 750px;
+    margin: 50px 50px 50px 0;
+}
+
+#planner {
+    color: #0c61a1;
+    font-family: "Mulish", sans-serif;
+    font-size: 38px;
+    font-weight: 520;
+    margin: 50px 0 30px 50px;
+}
+
+#words {
+    color: rgb(150, 150, 150);
+    font-family: "Mulish", sans-serif;
+    /* margin: 10px; */
+    /* padding-left:10px; */
+    margin-bottom: 2rem;
+    font-size: 22px;
+    line-height: 32px;
+    top: 10px;
+    margin: 0 0 0 50px;
+}
+
+.photo1 {
+    position: absolute;
+    top: 1000px;
+}
+
+.paragraph3 {
+    position: absolute;
+    flex-direction: row;
+    top: 1400px;
+    margin: 0 100px 0 100px;
+}
+
+.lan1 {
+    width: 770px;
+    height: 170px;
+    color: rgb(241, 239, 239);
+    background-color: rgb(222, 239, 243);
+    border: 3px solid white;
+    border-radius: 10px;
+    box-sizing: border-box;
+    box-sizing: inherit;
+    margin: 30px 50px 50px 550px;
+}
+
+#photo11 {
+    position: absolute;
+    top: 1430px;
+    left: 70px
+}
+
+.logo2 {
+    position: relative;
+    top: 18px;
+    right: 8px;
+}
+
+.meta {
+    font-family: "Mulish", sans-serif;
+    font-size: 14px;
+    color: rgb(129, 126, 126);
+    position: absolute;
+    left: 600px;
+    top: 2200px
+}
+
+#line1 {
+    position: absolute;
+    /* font-size: 30px; */
+    width: 1600px;
+    left: -84px;
+    opacity: 0.3;
+    top: 2150px
+}
+
+#line2 {
+    position: absolute;
+    /* font-size: 30px; */
+    width: 1600px;
+    left: -84px;
+    opacity: 0.3;
+    top: 2250px
+}
+
+#logo_1 {
+    position: absolute;
+    top: 1450px;
+    font-size: 17px;
+    color: rgb(80, 80, 80);
+    left: 770px;
+    right: 50px;
+}
+
+#logo_2 {
+    position: absolute;
+    top: 1680px;
+    font-size: 17px;
+    color: rgb(80, 80, 80);
+    left: 770px;
+    right: 50px;
+}
+
+#logo_3 {
+    position: absolute;
+    top: 1900px;
+    font-size: 17px;
+    color: rgb(80, 80, 80);
+    left: 770px;
+    right: 50px;
+}

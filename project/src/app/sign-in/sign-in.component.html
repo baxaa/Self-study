@@ -1,0 +1,17 @@
+<body>
+    <div class="form-box">
+        <form class="form">
+            <span class="title">Self-Study</span>
+            <span class="subtitle">Login your account with your email</span>
+            <div class="form-container">
+                <input type="email" class="input" placeholder="User name" name = "email" [(ngModel)] = "email">
+                <input type="password" class="input" placeholder="Password" name = "password" [(ngModel)] = "password">
+            </div>
+            <button (click) = login()>Login</button>
+        </form>
+        <div class="form-section">
+            <p>Don't you have an account yet? <a href="" [routerLink]="['/sign-up']">Register</a> </p>
+            <p><a [routerLink]="['/']"> Back </a></p>
+        </div>
+    </div>
+</body>

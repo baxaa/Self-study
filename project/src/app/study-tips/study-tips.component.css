@@ -1,0 +1,254 @@
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 8px 0;
+}
+
+p {
+    margin: 0;
+    font-family: sans-serif;
+    font-size: large;
+}
+
+.spacer {
+    flex: 1;
+}
+
+.toolbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(to right, #2a3665, #1a67a3, #02eeee);
+    color: white;
+    font-weight: 600;
+    opacity: 20;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.nav-bar {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    position: inherit;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.nav-option {
+    float: right;
+}
+
+.nav-option a {
+    position: relative;
+    display: block;
+    color: white;
+    padding: 20px 20px;
+    text-decoration: none;
+    text-align: left;
+    font-size: 23px;
+    right: 150px
+}
+
+.nav-option a:hover {
+    text-decoration: underline;
+}
+
+.nav-option a:after {
+    text-decoration: underline;
+    background: linear-gradient(to right, #2a3665, #1a67a3, #02eeee);
+    text-decoration: #2a3665, fixed;
+}
+
+.SS {
+    font-family: 'Libre Baskerville', serif;
+    font-weight: bold;
+    font-size: 35px;
+    position: relative;
+    left: 100px;
+}
+
+.nav-option-after {
+    display: flex;
+    position: relative;
+    font-size: 23px;
+    right: 50px;
+    border-radius: 3px;
+    height: min-content;
+    border-width: 0px;
+    background-color: #22456041;
+}
+
+.nav-option-after:hover {
+    background-color: transparent;
+}
+
+.nav-option-after-a {
+    position: relative;
+    display: flex;
+    text-decoration: none;
+    color: white;
+}
+
+#logo {
+    position: relative;
+    left: 90px;
+}
+
+.paragraph1 {
+    position: relative;
+    top: 100px;
+    color: #2a3665;
+    font-size: 26px;
+    font-weight: 400;
+    font-family: 'Segoe UI';
+    /* background:linear-gradient(to right, #2a3665, #1a67a3, #02eeee); */
+}
+
+h2 {
+    position: absolute;
+    top: 100px;
+    color: white;
+    font-family: italic, serif;
+    left: 50px;
+    right: 50px;
+    background: linear-gradient(to right, #2a3665, #1a67a3, #02eeee);
+    text-align: center;
+
+}
+
+#c {
+    position: absolute;
+    top: 250px;
+    left: 150px;
+    /* display: inline-block; */
+    border-radius: 10px;
+    background-color: #90d4ec;
+    padding: 10px 10px 80px 10px;
+}
+
+#c1 {
+    color: #2a3665;
+    position: absolute;
+    top: 530px;
+    left: 220px;
+    font-size: 22px;
+    font-weight: bold;
+    text-decoration: none;
+    font-family: sans-serif;
+
+}
+
+#c1:hover {
+    text-decoration: underline;
+}
+
+#python {
+    position: absolute;
+    top: 250px;
+    left: 500px;
+    display: inline-block;
+    border-radius: 10px;
+    background-color: #90d4ec;
+    padding: 10px 10px 110px 10px;
+}
+
+#python1 {
+    color: #2a3665;
+    position: absolute;
+    top: 530px;
+    left: 550px;
+    font-size: 22px;
+    font-weight: bold;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
+#python1:hover {
+    text-decoration: underline;
+}
+
+#java {
+    position: absolute;
+    top: 250px;
+    left: 830px;
+    display: inline-block;
+    border-radius: 10px;
+    background-color: #90d4ec;
+    padding: 10px 10px 80px 10px;
+
+}
+
+#java1 {
+    color: #2a3665;
+    position: absolute;
+    top: 530px;
+    left: 890px;
+    font-size: 22px;
+    font-weight: bold;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
+#java1:hover {
+    text-decoration: underline;
+}
+
+#javascript {
+    position: absolute;
+    top: 250px;
+    left: 1160px;
+    display: inline-block;
+    border-radius: 10px;
+    background-color: #90d4ec;
+    padding: 10px 10px 110px 10px;
+}
+
+#javascript1 {
+    color: #2a3665;
+    position: absolute;
+    top: 530px;
+    left: 1195px;
+    font-size: 22px;
+    font-weight: bold;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
+#javascript1:hover {
+    text-decoration: underline;
+}
+
+.meta {
+    font-family: "Mulish", sans-serif;
+    font-size: 14px;
+    color: rgb(129, 126, 126);
+    position: absolute;
+    left: 600px;
+    top: 830px
+}
+
+#line1 {
+    position: absolute;
+    /* font-size: 30px; */
+    width: 105.4%;
+    left: -84px;
+    opacity: 0.3;
+    top: 780px
+}
+
+#line2 {
+    position: absolute;
+    /* font-size: 30px; */
+    width: 1345px;
+    left: -84px;
+    opacity: 0.3;
+    top: 880px;
+}

@@ -1,0 +1,33 @@
+.button-back {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    width: 80px;
+    height: 36px;
+    font-family: 'Libre Baskerville', serif;
+    background-color: #1c649b;
+    border-radius: 6px;
+    border-color: #1c649b;
+    border-width: 0;
+    color: aliceblue;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.main {
+    --fc-border-color: rgb(96, 90, 90);
+    --fc-daygrid-event-dot-width: 5px;
+    color:#1c649b;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+.fc-right .fc-prev-button, .fc-right .fc-next-button{
+    background-color: #1c649b;
+    color: #1c649b;
+    border-color:#1c649b;
+}
+
+
+.calendar{
+    color: #1c649b;
+}

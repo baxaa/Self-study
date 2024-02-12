@@ -1,0 +1,44 @@
+<header>
+    <div style="max-width: max-content; height: 70px; ">
+        <a class="backToHome" [routerLink]="['/profile']">
+            <button class="button-back">
+                Home
+            </button>
+        </a>
+    </div>
+
+</header>
+<body>
+    <h1 class="title">To-Do List</h1>
+    <div class="todo-list">
+        <div class="list-head">
+            <input type="text" placeholder="New Task" id="new-task" [(ngModel)]="currentTask.title">
+            <!--       class="new-task"&ndash;&gt;-->
+            <button (click)="addTask()">Add</button>
+        </div>
+
+        <div>
+
+            <div *ngIf="newTasks.length">
+                <div *ngFor="let task of newTasks" class="item">
+                    <!-- <app-task-item [task]="task" (remove)="onNewTaskRemove($event)">
+                        
+                    </app-task-item> -->
+                    {{task.title}}
+                    <div class="trash">
+                        <i class="fa-solid fa-trash-can"></i>
+                        <button (click) = "deleteToDo(task.id)">
+                            delete
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+            <p *ngIf="newTasks.length == 0">The list is empty</p>
+
+            <div id="tasks">
+            </div>
+        </div>
+    </div>
+</body>

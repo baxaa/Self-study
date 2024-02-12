@@ -1,0 +1,185 @@
+<header>
+    <div style="max-width: max-content; height: 70px; ">
+        <a class="backToHome" [routerLink]="['/profile']">
+            <button class="button-back">
+                Home
+            </button>
+        </a>
+        <a>
+            <button (click)="AddTask()" class="button-to-add">
+                New Task
+            </button>
+        </a>
+    </div>
+
+</header>
+
+<body>
+    <div class="tasks">
+        <h1
+            style="position: relative; display: flex; bottom: 40px; left: 100px; width: min-content; color: #fff; font-size: 40px;">
+            Tasks</h1>
+        <fieldset
+            style="width: 48%; min-height: 600px; background-color: #fff; position: relative; display: flex; bottom: 40px; left: 20px;">
+            <div *ngIf="tasks">
+                <fieldset *ngFor="let task of tasks" class="element">
+                    <a (click)="forupdate(task.title)" style="cursor: pointer;">
+                        <div class="task-scop" style="left: 0;">
+                            <div class="task-border" style="left: 0;">
+                                <div class="task-detail" style="left: 0;">
+                                    <div class="chk-task">
+                                        <!-- <label class="container">
+                                    <input checked="checked" type="checkbox">
+                                    <div class="checkmark"></div>
+                                </label> -->
+                                        <!-- <div class="container">
+                                    <input type="checkbox" id="cbx" style="display: none;">
+                                    <label for="cbx" class="check">
+                                        <svg width="18px" height="18px" viewBox="0 0 18 18">
+                                            <path d="M1,9 L1,3.5 C1,2 2,1 3.5,1 L14.5,1 C16,1 17,2 17,3.5 L17,14.5 C17,16 16,17 14.5,17 L3.5,17 C2,17 1,16 1,14.5 L1,9 Z"></path>
+                                            <polyline points="1 9 7 14 15 4"></polyline>
+                                        </svg>
+                                    </label>
+                                </div> -->
+                                        <!-- <label class="checkbox-btn">
+                                        <label for="checkbox"></label>
+                                        <input id="checkbox" type="checkbox" (click)="forupdate(task.title)">
+                                        <span class="checkmark"></span>
+                                    </label> -->
+                                        <!-- <button>
+                                        <span>Button</span>
+                                    </button> -->
+                                    </div>
+                                    <div class="task-text">
+                                        <h3
+                                            style="font-family: proxima-nova, sans-serif; font-size: 18px;position: relative;">
+                                            {{task.title}}</h3>
+                                        <p
+                                            style="font-family: proxima-nova, sans-serif; font-size: 14px;position: relative;  min-width: fit-content; max-width: fit-content; height: fit-content;">
+                                            {{task.subject}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </fieldset>
+            </div>
+        </fieldset>
+        <fieldset class="addTask" *ngIf="addtask">
+            <fieldset class="task-input">
+                <header class="task-selector">
+                    <div class="task-title">
+                        <p
+                            style="font-family: proxima-nova,sans-serif; color: #fff; font-size: 20px; position: relative; top: 20px; left: 30px;">
+                            New Task</p>
+                    </div>
+                </header>
+                <fieldset class="task-inner">
+                    <div class="task-inputter">
+                        <div class="task-size">
+                            <div class="task-first-input">
+                                <div>
+                                    <p class="input-type">Subject</p>
+                                    <div>
+                                        <input type="text" class="input" placeholder="" name="subject_name"
+                                            [(ngModel)]="subject_name">
+                                    </div>
+                                </div>
+                                <div>
+                                    <p class="input-type">Date</p>
+                                    <div>
+                                        <input type="text" class="input" placeholder="" name="Date" [(ngModel)]="date">
+                                    </div>
+                                </div>
+                                <div>
+                                    <p class="input-type">Title</p>
+                                    <div>
+                                        <input type="text" class="input" placeholder="" name="title"
+                                            [(ngModel)]="title">
+                                    </div>
+                                </div>
+                                <div>
+                                    <p class="input-type">Description</p>
+                                    <div>
+                                        <textarea type="textarea" class="input-des" placeholder="" name="description"
+                                            [(ngModel)]="description"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+                <div class="task-save">
+                    <button (click)='createTask()'
+                        style="cursor: pointer;  position: relative; left: 558.6px; top: 10px; height: 40px; width: 100px; background-color: #2196F3; border-radius: 2px; border-width: 0px; color: #fff; font-family: proxima-nova, sans-serif; font-size: 17px;">
+                        Save
+                    </button>
+                    <button (click)='cancel()'
+                        style="position: relative; cursor: pointer; right: 97.6px; height: 40px; width: 100px; top: 10px; background-color: #fff; border-radius: 2px; border-width: 1px; border-color: #bbbbbb; font-family: proxima-nova, sans-serif; font-size: 17px;">
+                        Cancel
+                    </button>
+                </div>
+            </fieldset>
+        </fieldset>
+        <fieldset class="change-task" *ngIf="(task && details)">
+            <div class="view-task" style="height: 70px;">
+                <div class="info-task">
+                    <header class="task-editor">
+                        <div class="title-task" style="display: inline;">
+                            <h2
+                                style="color: #fff; font-family: proxima-nova, sans-serif; position: relative; left: 30px; top: 10px; font-weight: 300;">
+                                {{task.title}}</h2>
+                            <h3
+                                style="color: #fff; font-family: proxima-nova, sans-serif; position: relative; left: 30px; bottom: 4px; font-weight: 300;">
+                                {{task.subject}}</h3>
+                        </div>
+                        <div class="edit-task" style="display: inline; position: relative; left: 420px; bottom: 70px;">
+                            <button (click) = "edit_button()"
+                                style="cursor: pointer; font-family: proxima-nova, sans-serif; font-size: 17px; position: relative; height: 30px; width: 65px; border-radius: 4px; border-width: 0.1px; background-color: rgb(0, 212, 42); color: #fff; border-color:rgb(0, 212, 42) ;">
+                                Edit
+                            </button>
+                            <button (click)="deleteTask(task.id)"
+                                style=" cursor: pointer; font-family: proxima-nova, sans-serif; font-size: 17px; position: relative; left: 10px; height: 30px; width: 65px; border-radius: 4px; border-width: 0.1px; background-color: rgba(255, 0, 0, 0.918); color: #fff; border-color: rgba(255, 0, 0, 0.918);">
+                                Delete
+                            </button>
+                            <button (click)=close()
+                                style=" cursor: pointer; font-family: proxima-nova, sans-serif; font-size: 17px; position: relative; left: 20px; height: 30px; width: 65px; border-radius: 4px; border-width: 0.1px; background-color: #ffffff; color: #010101; border-color: #fff;">
+                                Close
+                            </button>
+                        </div>
+                    </header>
+                    <div
+                        style="position: relative; width: 660px; height: min-content; background-color: #fff; left: 2px;">
+                        <fieldset
+                            style="position: relative; text-indent: 50px; width: 633px; right: 2px; border-color: #fff;">
+                            <p style="position: sticky; max-width: 634px; text-indent: initial;">
+                                {{task.description}}<br></p>
+                        </fieldset>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+        <fieldset class="edit-task1" *ngIf="edit"
+            style="position: absolute; bottom: 365px; left: 53%; width: max-content; height: max-content; background-color: #fff;">
+            <div class="editer">
+                <div>
+                    <p class="input-type">Title</p>
+                    <div>
+                        <input type="text" class="input" placeholder="{{task.title}}" name="Title" [(ngModel)]="title" >
+                    </div>
+                </div>
+                <div>
+                    <p class="input-type" >Description</p>
+                    <div>
+                        <textarea type="text" class="input" placeholder="{{task.description}}" name="description" [(ngModel)]="description"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <button (click) = "editTask(task.id)" style="background-color:#2196F3; color: #fff; border-radius: 2px; border-width: 1px; height: 35px; width: 100px; font-size: 17px; position: relative; top: 10px;">
+                    Save
+                </button>
+            </div>
+        </fieldset>
+    </div>
+</body>
